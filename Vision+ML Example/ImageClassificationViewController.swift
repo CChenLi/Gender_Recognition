@@ -27,7 +27,7 @@ class ImageClassificationViewController: UIViewController {
              To use a different Core ML classifier model, add it to the project
              and replace `MobileNet` with that model's generated Swift class.
              */
-            let model = try VNCoreMLModel(for: MobileNet().model)
+            let model = try VNCoreMLModel(for: AutoML().model)
             
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
@@ -70,18 +70,19 @@ class ImageClassificationViewController: UIViewController {
                 return
             }
             // The `results` will always be `VNClassificationObservation`s, as specified by the Core ML model in this project.
-            let classifications = results as! [VNClassificationObservation]
-        
+            let classifications = results as! [VNCoreMLFeatureValueObservation]
+            print(results)
+            print(classifications.first!.featureValue.multiArrayValue!)
             if classifications.isEmpty {
                 self.classificationLabel.text = "Nothing recognized."
             } else {
                 // Display top classifications ranked by confidence in the UI.
-                let topClassifications = classifications.prefix(2)
-                let descriptions = topClassifications.map { classification in
-                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                   return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                let topClassifications = classifications.first!.featureValue.multiArrayValue![0]
+                self.classificationLabel.text = "Classification:\nFemale"
+                print(Float(topClassifications))
+                if Float(topClassifications) < pow(10, -20){
+                    self.classificationLabel.text = "Classification:\nMale"
                 }
-                self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
             }
         }
     }
