@@ -5,5 +5,8 @@
 - The model was train on [Google Cloud Service](https://cloud.google.com/), Vision
 
 ## Example
-![FotoJet](https://user-images.githubusercontent.com/63531857/96325552-93fdb980-0fdd-11eb-891e-36804ff0164f.jpg)
+
+> Acknowledgment, the first picture is a photo of Chen Li, and he has authorized the usage of the photo. The rest two are randomly found on Google, please contact me if you are the owner and feel uncomfortable of the usage. I will replace them ASAP.
+
+![Example](https://user-images.githubusercontent.com/63531857/96325552-93fdb980-0fdd-11eb-891e-36804ff0164f.jpg)
 
