@@ -5,5 +5,5 @@
 - The model was train on [Google Cloud Service](https://cloud.google.com/), Vision
 
 ## Example
-<img width="20%" alt="Screen Shot 2020-10-16 at 5 37 04 PM" src="https://user-images.githubusercontent.com/63531857/96325294-952de700-0fdb-11eb-9267-5aacae23049f.png">
+![FotoJet](https://user-images.githubusercontent.com/63531857/96325552-93fdb980-0fdd-11eb-891e-36804ff0164f.jpg)
 
