@@ -1,5 +1,7 @@
 # Gender Recognition based on Core Ml and Google Vision
 
+## Deprecated, please check the [latest version](https://github.com/CChenLi/Dynamic_Gender_Classification)
+
 - This is a mini demo of using AutoML for prediction on IOS devices
 - The project is **heavily** based on [This](https://cloud.google.com/vision/automl/docs/tflite-coreml-ios-tutorial)
 - The model was train on [Google Cloud Service](https://cloud.google.com/), Vision
